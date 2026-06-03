@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>咖啡制作教程</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: linear-gradient(135deg, #3e2723 0%, #5d4037 50%, #4e342e 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: #fff;
+  }
+  .header {
+    text-align: center;
+    padding: 30px 0 20px;
+  }
+  .header h1 {
+    font-size: 2.2em;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+  .header h1::before { content: "☕ "; }
+  .header .sub {
+    font-size: 0.95em;
+    opacity: 0.75;
+    margin-top: 6px;
+  }
+
+  .video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+  .card {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.12);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.35);
+  }
+  .card video {
+    width: 100%;
+    display: block;
+    background: #000;
+  }
+  .card-body {
+    padding: 18px 20px 22px;
+  }
+  .card-body .num {
+    display: inline-block;
+    background: rgba(255,255,255,0.18);
+    border-radius: 50%;
+    width: 32px; height: 32px;
+    line-height: 32px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 0.9em;
+    margin-right: 10px;
+  }
+  .card-body h3 {
+    display: inline;
+    font-size: 1.2em;
+    font-weight: 600;
+    vertical-align: middle;
+  }
+  .card-body p {
+    margin-top: 10px;
+    font-size: 0.9em;
+    opacity: 0.75;
+    line-height: 1.6;
+  }
+
+  .qr-section {
+    text-align: center;
+    padding: 40px 20px 30px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .qr-card {
+    display: inline-block;
+    background: #fff;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+  }
+  .qr-card img {
+    width: 200px; height: 200px;
+    display: block;
+  }
+  .qr-card .qr-hint {
+    color: #333;
+    font-size: 0.85em;
+    margin-top: 12px;
+    font-weight: 500;
+  }
+  .qr-hint::before { content: "📱 "; }
+
+  .footer {
+    text-align: center;
+    padding: 10px 0 30px;
+    font-size: 0.8em;
+    opacity: 0.5;
+  }
+
+  @media (max-width: 640px) {
+    .header h1 { font-size: 1.5em; }
+    .video-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>咖啡制作教程</h1>
+  <div class="sub">三步学会意式经典 · 扫码即看</div>
+</div>
+
+<div class="video-grid">
+  <!-- 1. 意式浓缩 -->
+  <div class="card">
+    <video controls playsinline preload="metadata"
+      poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='640' height='360'%3E%3Crect fill='%232d1a11' width='640' height='360'/%3E%3Ctext fill='%23c8a27a' font-size='28' font-family='sans-serif' x='50%25' y='50%25' text-anchor='middle' dy='.3em'%3EEspresso%3C/text%3E%3C/svg%3E">
+      <source src="https://jvod.300hu.com/vod/product/182d3965-d752-47ec-a8e9-6126e8bf999c/2fb5b7fd17604616a7d674f1ae28bb9c.mp4" type="video/mp4">
+    </video>
+    <div class="card-body">
+      <span class="num">1</span><h3>制作意式浓缩</h3>
+      <p>学习如何萃取一杯醇正的意式浓缩咖啡，掌握研磨度、粉量和萃取时间的黄金比例。</p>
+    </div>
+  </div>
+
+  <!-- 2. 热水 -->
+  <div class="card">
+    <video controls playsinline preload="metadata"
+      poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='640' height='360'%3E%3Crect fill='%231a2d3d' width='640' height='360'/%3E%3Ctext fill='%237aafc8' font-size='28' font-family='sans-serif' x='50%25' y='50%25' text-anchor='middle' dy='.3em'%3EHot Water%3C/text%3E%3C/svg%3E">
+      <source src="https://jvod.300hu.com/vod/product/c555193f-f4ca-423f-ad0b-49d63041c897/f4b1a39797a741a6a27597723d97b222.mp4" type="video/mp4">
+    </video>
+    <div class="card-body">
+      <span class="num">2</span><h3>如何制作热水</h3>
+      <p>咖啡机热水功能详解，确保每次都能获得理想温度的热水用于冲泡或预热杯具。</p>
+    </div>
+  </div>
+
+  <!-- 3. 卡布奇诺 -->
+  <div class="card">
+    <video controls playsinline preload="metadata"
+      poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='640' height='360'%3E%3Crect fill='%232d111a' width='640' height='360'/%3E%3Ctext fill='%23c87aa0' font-size='28' font-family='sans-serif' x='50%25' y='50%25' text-anchor='middle' dy='.3em'%3ECappuccino%3C/text%3E%3C/svg%3E">
+      <source src="https://jvod.300hu.com/vod/product/4429a2f7-b049-4767-a564-0f2bce841d4e/302b21f4e792492eb376d7149479bdf0.mp4" type="video/mp4">
+    </video>
+    <div class="card-body">
+      <span class="num">3</span><h3>制作卡布奇诺</h3>
+      <p>掌握奶泡打发技巧，制作一杯完美的卡布奇诺——浓缩咖啡、蒸汽牛奶与绵密奶泡的经典组合。</p>
+    </div>
+  </div>
+</div>
+
+<div class="qr-section">
+  <div class="qr-card">
+    <img src="coffee_qr.png" alt="扫码访问本页面">
+    <div class="qr-hint">微信扫一扫 打开本页面</div>
+  </div>
+</div>
+
+<div class="footer">扫码即可在手机上观看全部教程视频</div>
+
+</body>
+</html>
